@@ -4,14 +4,20 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 import br.com.alura.mvc.mudi.model.Oferta;
 
 public class RequisicaoNovaOferta {
 	
 	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
+	@Pattern(regexp = "^\\d+(\\.\\d+{2})?$")
+	@NotNull
 	private Long pedidoId;
 	
+	@Pattern(regexp = "^\\d{2}/\\d{2}/\\d{4}$")
 	private String valor;
 	
 	private String dataEntrega;

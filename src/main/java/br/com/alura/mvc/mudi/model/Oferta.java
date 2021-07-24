@@ -65,7 +65,4 @@ public class Oferta {
 		this.comentario = comentario;
 	}
 	
-	
-	
-	
 }
